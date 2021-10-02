@@ -11,11 +11,16 @@ def acknw(error,message):
         print("Failed to send messages : {}:{} ".format(message,error))
     else:
         print("Message sent succesfully")
-       
-with open("data.json",'r') as data:
-    content = data.read()
-    producer.produce("student_data" ,key = "sample",value = content , callback = acknw(None,"hi"))
-    producer.flush()
+      
+if __name__ == '__main__':
+    
+            with open('data.json','r') as file:
+                data = file.read()
+                producer.produce("student_data" ,key = "sample",value = data , callback = acknw)
+                producer.flush()
+                        
+            
+            
 
 
 
