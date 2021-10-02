@@ -14,7 +14,7 @@ def acknw(error,message):
        
 with open("data.json",'r') as data:
     content = data.read()
-    producer.produce("student_data" ,key = "sample1",value = content , callback = acknw(None,"hi"))
+    producer.produce("student_data" ,key = "sample",value = content , callback = acknw(None,"hi"))
     producer.flush()
 
 
