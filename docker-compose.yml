@@ -1,0 +1,10 @@
+version: '3'
+services:
+  mysql_container:
+    image: mysql:8
+    environment:
+      MYSQL_ROOT_PASSWORD: 123456
+      MYSQL_DATABASE: sample
+    ports:
+      - "3308:3306"
+  
