@@ -8,7 +8,7 @@ from sqlalchemy.sql.schema import Constraint, ForeignKey, ForeignKeyConstraint
 from sqlalchemy.sql.sqltypes import BIGINT
 
 meta =MetaData()
-engine = create_engine("mysql+mysqlconnector://root:123456@localhost/sample",echo = True)
+engine = create_engine("mysql+mysqlconnector://root:123456@localhost:3308/sample",echo = True)
 connection = engine.connect()
 Table(
     'student', meta,
@@ -82,10 +82,10 @@ def msg_process(msg):
                 for i in range(len(v)):
                     for key, value in v[i].items():
                         stu_phone_dict[key]=value
-                    contact_columns = ', '.join(""+str(x)+"" for x in stu_phone_dict.keys())
-                    contact_values = ', '.join("'"+str(x)+"'" for x in stu_phone_dict.values())
-                    insert_sql2 = "INSERT INTO %s ( %s ) VALUES ( %s );" % ('student_contact', contact_columns, contact_values)
-                    connection.execute(insert_sql2)
+                    stu_contact_field = ', '.join(""+str(value)+"" for value in stu_phone_dict.keys())
+                    contact_values = ', '.join("'"+str(value)+"'" for value in stu_phone_dict.values())
+                    insert_statement= "INSERT INTO %s ( %s ) VALUES ( %s );" % ('student_contact', stu_contact_field, contact_values)
+                    connection.execute(insert_statement)
     except AttributeError:
         print("empty file sent by producer")
 
