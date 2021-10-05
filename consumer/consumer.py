@@ -89,14 +89,14 @@ def msg_process(msg):
     except AttributeError:
         print("empty file sent by producer")
 
-
 def basic_consume_loop(consumer, topics):
     try:
         consumer.subscribe(topics)
 
         while True:
             msg = consumer.poll(1)
-            if msg is None: break
+            if msg is None: 
+                break
 
             if msg.error():
                 if msg.error().code() == KafkaError._PARTITION_EOF:
@@ -105,8 +105,11 @@ def basic_consume_loop(consumer, topics):
                                      (msg.topic(), msg.partition(), msg.offset()))
                 elif msg.error():
                     raise KafkaException(msg.error())
+                
             else:
                 msg_process(msg)
+    except KafkaException:
+        print("Unknown topic or partition")
     finally:
         # Close down consumer to commit final offsets.
         consumer.close()
