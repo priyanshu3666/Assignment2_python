@@ -8,7 +8,7 @@ logger.setLevel(logging.DEBUG)
 class  TestProducer(unittest.TestCase):
     
     def test_acknw(self):
-        self.assertEqual(acknw(None,"hi"),None)
+        self.assertIsNone(acknw(None,"hi"),None)
         logging.info("test_acknw successfully tested")
         
     def test_type_compatibilty_acknw(self):
