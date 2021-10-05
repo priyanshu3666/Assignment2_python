@@ -1,18 +1,18 @@
 {
-    "firstName":"Rack",
-    "lastName":"Jackon",
+    "firstName":"Priyanshu",
+    "lastName":"Shukla",
     "gender":"man",
-    "age":24,
+    "age":22,
     "address":{
-       "streetAddress":"126",
-       "city":"San Jone",
-       "state":"CA",
-       "postalCode":"394221"
+       "streetAddress":"156",
+       "city":"Rath",
+       "state":"UP",
+       "postalCode":"210431"
     },
     "phoneNumbers":[
        {
           "type":"home",
-          "number":"7383627627"
+          "number":"8004954515"
        }
        
     ]

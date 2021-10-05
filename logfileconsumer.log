@@ -1,0 +1,135 @@
+2021-10-05 18:23:31,443 test_mysql_connection successfully tested
+2021-10-05 18:23:31,443 BEGIN (implicit)
+2021-10-05 18:23:31,444 SELECT COUNT(*) FROM information_schema.tables WHERE table_schema = %(table_schema)s AND table_name = %(table_name)s
+2021-10-05 18:23:31,444 [cached since 0.04839s ago] {'table_schema': 'sample', 'table_name': 'student'}
+2021-10-05 18:23:31,446 SELECT COUNT(*) FROM information_schema.tables WHERE table_schema = %(table_schema)s AND table_name = %(table_name)s
+2021-10-05 18:23:31,446 [cached since 0.05056s ago] {'table_schema': 'sample', 'table_name': 'student_contact'}
+2021-10-05 18:23:31,447 COMMIT
+2021-10-05 18:43:24,848 test_mysql_connection successfully tested
+2021-10-05 18:43:24,848 BEGIN (implicit)
+2021-10-05 18:43:24,849 SELECT COUNT(*) FROM information_schema.tables WHERE table_schema = %(table_schema)s AND table_name = %(table_name)s
+2021-10-05 18:43:24,849 [cached since 0.04114s ago] {'table_schema': 'sample', 'table_name': 'student'}
+2021-10-05 18:43:24,851 SELECT COUNT(*) FROM information_schema.tables WHERE table_schema = %(table_schema)s AND table_name = %(table_name)s
+2021-10-05 18:43:24,852 [cached since 0.04351s ago] {'table_schema': 'sample', 'table_name': 'student_contact'}
+2021-10-05 18:43:24,853 COMMIT
+2021-10-05 18:43:39,828 test_mysql_connection successfully tested
+2021-10-05 18:43:39,828 BEGIN (implicit)
+2021-10-05 18:43:39,829 SELECT COUNT(*) FROM information_schema.tables WHERE table_schema = %(table_schema)s AND table_name = %(table_name)s
+2021-10-05 18:43:39,829 [cached since 0.008585s ago] {'table_schema': 'sample', 'table_name': 'student'}
+2021-10-05 18:43:39,831 SELECT COUNT(*) FROM information_schema.tables WHERE table_schema = %(table_schema)s AND table_name = %(table_name)s
+2021-10-05 18:43:39,831 [cached since 0.01078s ago] {'table_schema': 'sample', 'table_name': 'student_contact'}
+2021-10-05 18:43:39,833 COMMIT
+2021-10-05 18:48:25,029 test_mysql_connection successfully tested
+2021-10-05 18:48:25,029 BEGIN (implicit)
+2021-10-05 18:48:25,031 SELECT COUNT(*) FROM information_schema.tables WHERE table_schema = %(table_schema)s AND table_name = %(table_name)s
+2021-10-05 18:48:25,031 [cached since 1.032s ago] {'table_schema': 'sample', 'table_name': 'student'}
+2021-10-05 18:48:25,035 SELECT COUNT(*) FROM information_schema.tables WHERE table_schema = %(table_schema)s AND table_name = %(table_name)s
+2021-10-05 18:48:25,035 [cached since 1.037s ago] {'table_schema': 'sample', 'table_name': 'student_contact'}
+2021-10-05 18:48:25,037 COMMIT
+2021-10-05 18:50:37,413 test_mysql_connection successfully tested
+2021-10-05 18:50:37,414 BEGIN (implicit)
+2021-10-05 18:50:37,415 SELECT COUNT(*) FROM information_schema.tables WHERE table_schema = %(table_schema)s AND table_name = %(table_name)s
+2021-10-05 18:50:37,415 [cached since 1.023s ago] {'table_schema': 'sample', 'table_name': 'student'}
+2021-10-05 18:50:37,419 SELECT COUNT(*) FROM information_schema.tables WHERE table_schema = %(table_schema)s AND table_name = %(table_name)s
+2021-10-05 18:50:37,420 [cached since 1.027s ago] {'table_schema': 'sample', 'table_name': 'student_contact'}
+2021-10-05 18:50:37,422 COMMIT
+2021-10-05 18:51:09,835 test_mysql_connection successfully tested
+2021-10-05 18:51:09,835 BEGIN (implicit)
+2021-10-05 18:51:09,837 SELECT COUNT(*) FROM information_schema.tables WHERE table_schema = %(table_schema)s AND table_name = %(table_name)s
+2021-10-05 18:51:09,837 [cached since 5.05s ago] {'table_schema': 'sample', 'table_name': 'student'}
+2021-10-05 18:51:09,842 SELECT COUNT(*) FROM information_schema.tables WHERE table_schema = %(table_schema)s AND table_name = %(table_name)s
+2021-10-05 18:51:09,843 [cached since 5.055s ago] {'table_schema': 'sample', 'table_name': 'student_contact'}
+2021-10-05 18:51:09,845 COMMIT
+2021-10-05 18:53:47,818 test_mysql_connection successfully tested
+2021-10-05 18:53:47,818 BEGIN (implicit)
+2021-10-05 18:53:47,819 SELECT COUNT(*) FROM information_schema.tables WHERE table_schema = %(table_schema)s AND table_name = %(table_name)s
+2021-10-05 18:53:47,819 [cached since 0.0391s ago] {'table_schema': 'sample', 'table_name': 'student'}
+2021-10-05 18:53:47,821 SELECT COUNT(*) FROM information_schema.tables WHERE table_schema = %(table_schema)s AND table_name = %(table_name)s
+2021-10-05 18:53:47,821 [cached since 0.04139s ago] {'table_schema': 'sample', 'table_name': 'student_contact'}
+2021-10-05 18:53:47,823 COMMIT
+2021-10-05 18:54:24,983 test_mysql_connection successfully tested
+2021-10-05 18:54:24,984 BEGIN (implicit)
+2021-10-05 18:54:24,985 SELECT COUNT(*) FROM information_schema.tables WHERE table_schema = %(table_schema)s AND table_name = %(table_name)s
+2021-10-05 18:54:24,985 [cached since 1.091s ago] {'table_schema': 'sample', 'table_name': 'student'}
+2021-10-05 18:54:24,990 SELECT COUNT(*) FROM information_schema.tables WHERE table_schema = %(table_schema)s AND table_name = %(table_name)s
+2021-10-05 18:54:24,990 [cached since 1.096s ago] {'table_schema': 'sample', 'table_name': 'student_contact'}
+2021-10-05 18:54:24,992 COMMIT
+2021-10-05 18:54:46,040 test_mysql_connection successfully tested
+2021-10-05 18:54:46,040 BEGIN (implicit)
+2021-10-05 18:54:46,042 SELECT COUNT(*) FROM information_schema.tables WHERE table_schema = %(table_schema)s AND table_name = %(table_name)s
+2021-10-05 18:54:46,042 [cached since 1.829s ago] {'table_schema': 'sample', 'table_name': 'student'}
+2021-10-05 18:54:46,046 SELECT COUNT(*) FROM information_schema.tables WHERE table_schema = %(table_schema)s AND table_name = %(table_name)s
+2021-10-05 18:54:46,046 [cached since 1.833s ago] {'table_schema': 'sample', 'table_name': 'student_contact'}
+2021-10-05 18:54:46,048 COMMIT
+2021-10-05 18:55:39,740 test_mysql_connection successfully tested
+2021-10-05 18:55:39,741 BEGIN (implicit)
+2021-10-05 18:55:39,743 SELECT COUNT(*) FROM information_schema.tables WHERE table_schema = %(table_schema)s AND table_name = %(table_name)s
+2021-10-05 18:55:39,743 [cached since 1.033s ago] {'table_schema': 'sample', 'table_name': 'student'}
+2021-10-05 18:55:39,748 SELECT COUNT(*) FROM information_schema.tables WHERE table_schema = %(table_schema)s AND table_name = %(table_name)s
+2021-10-05 18:55:39,748 [cached since 1.038s ago] {'table_schema': 'sample', 'table_name': 'student_contact'}
+2021-10-05 18:55:39,751 COMMIT
+2021-10-05 18:56:03,342 test_mysql_connection successfully tested
+2021-10-05 18:56:03,342 BEGIN (implicit)
+2021-10-05 18:56:03,344 SELECT COUNT(*) FROM information_schema.tables WHERE table_schema = %(table_schema)s AND table_name = %(table_name)s
+2021-10-05 18:56:03,344 [cached since 1.026s ago] {'table_schema': 'sample', 'table_name': 'student'}
+2021-10-05 18:56:03,348 SELECT COUNT(*) FROM information_schema.tables WHERE table_schema = %(table_schema)s AND table_name = %(table_name)s
+2021-10-05 18:56:03,349 [cached since 1.03s ago] {'table_schema': 'sample', 'table_name': 'student_contact'}
+2021-10-05 18:56:03,352 COMMIT
+2021-10-05 19:07:58,812 test_mysql_connection successfully tested
+2021-10-05 19:07:58,812 BEGIN (implicit)
+2021-10-05 19:07:58,814 SELECT COUNT(*) FROM information_schema.tables WHERE table_schema = %(table_schema)s AND table_name = %(table_name)s
+2021-10-05 19:07:58,814 [cached since 1.054s ago] {'table_schema': 'sample', 'table_name': 'student'}
+2021-10-05 19:07:58,819 SELECT COUNT(*) FROM information_schema.tables WHERE table_schema = %(table_schema)s AND table_name = %(table_name)s
+2021-10-05 19:07:58,819 [cached since 1.059s ago] {'table_schema': 'sample', 'table_name': 'student_contact'}
+2021-10-05 19:07:58,821 COMMIT
+2021-10-05 19:08:40,773 test_mysql_connection successfully tested
+2021-10-05 19:08:40,773 BEGIN (implicit)
+2021-10-05 19:08:40,775 SELECT COUNT(*) FROM information_schema.tables WHERE table_schema = %(table_schema)s AND table_name = %(table_name)s
+2021-10-05 19:08:40,775 [cached since 1.04s ago] {'table_schema': 'sample', 'table_name': 'student'}
+2021-10-05 19:08:40,779 SELECT COUNT(*) FROM information_schema.tables WHERE table_schema = %(table_schema)s AND table_name = %(table_name)s
+2021-10-05 19:08:40,779 [cached since 1.045s ago] {'table_schema': 'sample', 'table_name': 'student_contact'}
+2021-10-05 19:08:40,783 COMMIT
+2021-10-05 19:10:30,887 test_mysql_connection successfully tested
+2021-10-05 19:10:30,887 BEGIN (implicit)
+2021-10-05 19:10:30,888 SELECT COUNT(*) FROM information_schema.tables WHERE table_schema = %(table_schema)s AND table_name = %(table_name)s
+2021-10-05 19:10:30,889 [cached since 1.032s ago] {'table_schema': 'sample', 'table_name': 'student'}
+2021-10-05 19:10:30,893 SELECT COUNT(*) FROM information_schema.tables WHERE table_schema = %(table_schema)s AND table_name = %(table_name)s
+2021-10-05 19:10:30,894 [cached since 1.037s ago] {'table_schema': 'sample', 'table_name': 'student_contact'}
+2021-10-05 19:10:30,896 COMMIT
+2021-10-05 19:13:04,461 test_mysql_connection successfully tested
+2021-10-05 19:13:04,462 BEGIN (implicit)
+2021-10-05 19:13:04,463 SELECT COUNT(*) FROM information_schema.tables WHERE table_schema = %(table_schema)s AND table_name = %(table_name)s
+2021-10-05 19:13:04,464 [cached since 1.031s ago] {'table_schema': 'sample', 'table_name': 'student'}
+2021-10-05 19:13:04,466 SELECT COUNT(*) FROM information_schema.tables WHERE table_schema = %(table_schema)s AND table_name = %(table_name)s
+2021-10-05 19:13:04,466 [cached since 1.034s ago] {'table_schema': 'sample', 'table_name': 'student_contact'}
+2021-10-05 19:13:04,468 COMMIT
+2021-10-05 19:13:23,493 test_mysql_connection successfully tested
+2021-10-05 19:13:23,494 BEGIN (implicit)
+2021-10-05 19:13:23,496 SELECT COUNT(*) FROM information_schema.tables WHERE table_schema = %(table_schema)s AND table_name = %(table_name)s
+2021-10-05 19:13:23,496 [cached since 1.038s ago] {'table_schema': 'sample', 'table_name': 'student'}
+2021-10-05 19:13:23,500 SELECT COUNT(*) FROM information_schema.tables WHERE table_schema = %(table_schema)s AND table_name = %(table_name)s
+2021-10-05 19:13:23,500 [cached since 1.042s ago] {'table_schema': 'sample', 'table_name': 'student_contact'}
+2021-10-05 19:13:23,503 COMMIT
+2021-10-05 19:14:23,740 test_mysql_connection successfully tested
+2021-10-05 19:14:23,741 BEGIN (implicit)
+2021-10-05 19:14:23,742 SELECT COUNT(*) FROM information_schema.tables WHERE table_schema = %(table_schema)s AND table_name = %(table_name)s
+2021-10-05 19:14:23,742 [cached since 1.042s ago] {'table_schema': 'sample', 'table_name': 'student'}
+2021-10-05 19:14:23,747 SELECT COUNT(*) FROM information_schema.tables WHERE table_schema = %(table_schema)s AND table_name = %(table_name)s
+2021-10-05 19:14:23,747 [cached since 1.047s ago] {'table_schema': 'sample', 'table_name': 'student_contact'}
+2021-10-05 19:14:23,750 COMMIT
+2021-10-05 19:15:04,284 test_mysql_connection successfully tested
+2021-10-05 19:15:04,285 BEGIN (implicit)
+2021-10-05 19:15:04,286 SELECT COUNT(*) FROM information_schema.tables WHERE table_schema = %(table_schema)s AND table_name = %(table_name)s
+2021-10-05 19:15:04,287 [cached since 1.019s ago] {'table_schema': 'sample', 'table_name': 'student'}
+2021-10-05 19:15:04,291 SELECT COUNT(*) FROM information_schema.tables WHERE table_schema = %(table_schema)s AND table_name = %(table_name)s
+2021-10-05 19:15:04,291 [cached since 1.024s ago] {'table_schema': 'sample', 'table_name': 'student_contact'}
+2021-10-05 19:15:04,295 COMMIT
+2021-10-05 20:06:08,560 select firstName,lastName,age,postalcode,number from student,student_contact  where student_contact.number=8004954515 and student.postalcode=210431
+2021-10-05 20:06:08,561 [raw sql] {}
+2021-10-05 20:06:08,564 test_mysql_connection successfully tested
+2021-10-05 20:06:08,564 BEGIN (implicit)
+2021-10-05 20:06:08,565 SELECT COUNT(*) FROM information_schema.tables WHERE table_schema = %(table_schema)s AND table_name = %(table_name)s
+2021-10-05 20:06:08,566 [cached since 1.041s ago] {'table_schema': 'sample', 'table_name': 'student'}
+2021-10-05 20:06:08,569 SELECT COUNT(*) FROM information_schema.tables WHERE table_schema = %(table_schema)s AND table_name = %(table_name)s
+2021-10-05 20:06:08,570 [cached since 1.045s ago] {'table_schema': 'sample', 'table_name': 'student_contact'}
+2021-10-05 20:06:08,571 COMMIT

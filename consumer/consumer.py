@@ -1,3 +1,4 @@
+import logging
 from confluent_kafka import Consumer
 from confluent_kafka import KafkaError,KafkaException
 import sys
@@ -36,13 +37,14 @@ conf = {'bootstrap.servers': "localhost:9092",
         'group.id': "student_data",
         'auto.offset.reset': 'earliest'}
 
+
 consumer = Consumer(conf)
 
 def msg_process(msg):
     data = {}
     try:
-        last_id_sql = connection.execute("select max(stu_id) from student")
-        last_id = last_id_sql.all()[0][0]
+        last_insert = connection.execute("select max(stu_id) from student")
+        last_id = last_insert.all()[0][0]
     except ConnectionError:
         print("connection not established with database ")
        
@@ -73,8 +75,9 @@ def msg_process(msg):
 
     details_columns = ', '.join(""+str(x)+"" for x in stu_detail_dict.keys())
     details_values = ', '.join("'"+str(x)+"'" for x in stu_detail_dict.values())
-    insert_sql1 = "INSERT INTO %s ( %s ) VALUES ( %s );" % ('student', details_columns, details_values)
-    connection.execute(insert_sql1)
+    insert_query = "INSERT INTO %s ( %s ) VALUES ( %s );" % ('student', details_columns, details_values)
+    connection.execute(insert_query)
+    
 
     try:
         for k,v in json.loads(data['sample']).items():
@@ -89,6 +92,7 @@ def msg_process(msg):
     except AttributeError:
         print("empty file sent by producer")
 
+
 def basic_consume_loop(consumer, topics):
     try:
         consumer.subscribe(topics)
@@ -98,22 +102,15 @@ def basic_consume_loop(consumer, topics):
             if msg is None: 
                 break
 
-            if msg.error():
-                if msg.error().code() == KafkaError._PARTITION_EOF:
-                    # End of partition event
-                    sys.stderr.write('%% %s [%d] reached end at offset %d\n' %
-                                     (msg.topic(), msg.partition(), msg.offset()))
-                elif msg.error():
+            if msg.error():                
+                if msg.error():
                     raise KafkaException(msg.error())
                 
             else:
                 msg_process(msg)
     except KafkaException:
         print("Unknown topic or partition")
-    finally:
-        # Close down consumer to commit final offsets.
-        consumer.close()
-
+   
 if __name__ == '__main__':
     basic_consume_loop(consumer, ['student_data'])
 

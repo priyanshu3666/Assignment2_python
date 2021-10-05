@@ -2,7 +2,7 @@ import unittest
 from producer.producer import acknw
 import logging
 
-logging.basicConfig(filename="logfile.log",format='%(asctime)s %(message)s',filemode='w')
+logging.basicConfig(filename="producerlogfile.log",format='%(asctime)s %(message)s',filemode='w')
 logger=logging.getLogger()
 logger.setLevel(logging.DEBUG)
 class  TestProducer(unittest.TestCase):
