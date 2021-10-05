@@ -7,11 +7,14 @@ conf = {'bootstrap.servers': "localhost:9092",
 producer = Producer(conf)
 
 def acknw(error,message):
-    if error is not None:
-        print("Failed to send messages : {}:{} ".format(message,error))
-    else:
-        print("Message sent succesfully")
-      
+    try:
+        if error is not None:
+            print("Failed to send messages : {}:{} ".format(message,error))
+        else:
+            print("Message sent succesfully")
+    except TypeError:
+        print("message should be string")
+        
 if __name__ == '__main__':
     
             with open('data.json','r') as file:
