@@ -8,7 +8,7 @@ from sqlalchemy.sql.schema import Constraint, ForeignKey, ForeignKeyConstraint
 from sqlalchemy.sql.sqltypes import BIGINT
 
 meta =MetaData()
-engine = create_engine("mysql+mysqlconnector://root:123456@localhost:3308/sample",echo = True)
+engine = create_engine("mysql+mysqlconnector://shukla:a123456@0.0.0.0:3306/sample",echo = True)
 connection = engine.connect()
 Table(
     'student', meta,
