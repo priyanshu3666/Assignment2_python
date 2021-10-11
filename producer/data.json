@@ -1,18 +1,18 @@
 {
-    "firstName":"Priyanshu",
-    "lastName":"Shukla",
-    "gender":"man",
-    "age":22,
+    "firstName":"A",
+    "lastName":"C",
+    "gender":"male",
+    "age":21,
     "address":{
-       "streetAddress":"156",
-       "city":"Rath",
+       "streetAddress":"524",
+       "city":"Baberu",
        "state":"UP",
        "postalCode":"210431"
     },
     "phoneNumbers":[
        {
           "type":"home",
-          "number":"8004954515"
+          "number":"95165"
        }
        
     ]

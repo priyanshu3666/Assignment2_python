@@ -13,11 +13,11 @@ def acknw(error,message):
         else:
             print("Message sent succesfully")
     except TypeError:
-        print("message should be string")
+        print("mes sage should be string")
         
 if __name__ == '__main__':
     
-            with open('data.json','r') as file:
+            with open('/home/priyanshu/Desktop/Assignment2_python/producer/data.json','r') as file:
                 data = file.read()
                 producer.produce("student_data" ,key = "sample",value = data , callback = acknw)
                 producer.flush()
