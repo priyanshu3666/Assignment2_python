@@ -49,7 +49,7 @@ def msg_process(msg):
     if os.path.exists(f'{file_path_stu}'):
         with open(f'{file_path_stu}','a') as csv_file:
             csv_writer_ = csv.DictWriter(csv_file,student_header)        
-            csv_writer_.writerow({field: stu_detail_dict[field] for field in student_header})
+            csv_writer_.writerow(stu_detail_dict)
     else:
         with open(f'{file_path_stu}','a') as csv_file:
             csv_writer_ = csv.DictWriter(csv_file,student_header)
