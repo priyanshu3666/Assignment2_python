@@ -37,26 +37,37 @@ try:
     last_id = last_insert.all()[0][0]
 except ConnectionError:
     print("connection not established with database ")
-    
-stu_data = pd.read_csv('student.csv', index_col=False, delimiter = ',')
-stu_data.head()
-for num,row in stu_data.iterrows():
-    sql_query = f"INSERT INTO student VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s)"
-    connection.execute(sql_query, tuple(row))
+try:
+    file_path_stu_contact = "/home/priyanshu/Desktop/Assignment2_python/student_contact.csv"
+    file_path_stu = "/home/priyanshu/Desktop/Assignment2_python/student.csv"    
+    stu_data = pd.read_csv(file_path_stu, index_col=False, delimiter = ',')
+    stu_data.head()
+    for num,row in stu_data.iterrows():
+        sql_query = f"INSERT INTO student VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s)"
+        connection.execute(sql_query, tuple(row))
+            
         
-    
-stu_contact_data = pd.read_csv('student_contact.csv', index_col=False, delimiter = ',')
-stu_contact_data.head()
-for num,row in stu_contact_data.iterrows():
-    cont_insert = connection.execute("select max(cont_id) from student_contact")
-    cont_id = cont_insert.all()[0][0]
-    if cont_id is None:
-        cont_id  = 1
+    stu_contact_data = pd.read_csv(file_path_stu_contact, index_col=False, delimiter = ',')
+    stu_contact_data.head()
+    for num,row in stu_contact_data.iterrows():
+        cont_insert = connection.execute("select max(cont_id) from student_contact")
+        cont_id = cont_insert.all()[0][0]
+        if cont_id is None:
+            cont_id  = 1
+            
+        else:
+            cont_id +=1
+        sql_query = f"INSERT INTO student_contact  VALUES ({cont_id},%s,%s,%s)"
+        connection.execute(sql_query, tuple(row))
         
-    else:
-        cont_id +=1
-    sql_query = f"INSERT INTO student_contact  VALUES ({cont_id},%s,%s,%s)"
-    connection.execute(sql_query, tuple(row))
+    file_student = open(file_path_stu,'w')
+    file_student.write('stu_id,firstName,lastName,gender,age,streetAddress,city,state,postalCode')
+    file_student.close()
+    file_student_contact = open(file_path_stu_contact,'w')
+    file_student_contact.write('stu_id,type,number')
+    file_student_contact.close()
+except FileNotFoundError:
+    print("File not found")
 
-    
+
 
